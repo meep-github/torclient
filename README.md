@@ -1,2 +1,4 @@
 # torclient-lib
-A simple, lightweight and easy to use tor proxy library for python
+A Simple, Lightweight and Easy To Use, TOR Proxy Library For Python
+
+
