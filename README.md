@@ -45,6 +45,11 @@ Now, you can use 'proxy_socket' just like a normal socket object, and it goes th
     proxy_socket = proxy_sesison.InitProxy("localhost", 9050, False) # as we declared before
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # normal socket without proxy!
     
+    #'proxy_socket' now is literally a socket object!
+    
+    proxy_socket.connect(("google.com", 80)) #connects through proxy
+    s.connect(("google.com", 80)) #connects through normal
+    
     proxy_socket.close()
     s.close()
 
