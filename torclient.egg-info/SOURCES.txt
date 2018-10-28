@@ -1,0 +1,7 @@
+setup.py
+torclient/torclient.py
+torclient.egg-info/PKG-INFO
+torclient.egg-info/SOURCES.txt
+torclient.egg-info/dependency_links.txt
+torclient.egg-info/requires.txt
+torclient.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+pysocks
+requests
+setuptools
+stem

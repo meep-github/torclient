@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: torclient
+Version: 1.1
+Summary: A Simple, Lightweight and Easy To Use, TOR Proxy Library For Python
+Home-page: https://github.com/petrexxy
+Author: petrexxy
+Author-email: psmall.775@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Penetration Testers/Developers
+Classifier: Topic :: Networking
