@@ -70,7 +70,7 @@ def seperate_socket_example():
 	print("Your Regular IP: "+(receive_normal_socket[264:]).replace("\n", "")) # Hate those new lines! >:(
 	print("Your Proxy IP:   "+(receive_proxy_socket[264:]).replace("\n", ""))
 	#Should be different IP addresses! Unless the config broke >.>
-
+	print("\n\n")
 
 
 def global_socket_example():
