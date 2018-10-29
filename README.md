@@ -1,19 +1,49 @@
 # torclient-lib
 A Simple, Lightweight and Easy To Use, TOR Proxy Library For Python
 
+If you haven't already, you can install a TOR proxy server on linux with the command:
+   
+    apt-get install tor
+    #check installation command for other distros of linux :)
+
+Then edit the file /etc/tor/torrc until you find the line:
+    
+    "#ControlPort 9051"
+    Take away the comment # and edit to:
+    "ControlPort 9051"
+    
+Next, set your password. This can be done by running the command:
+
+    $ tor --hash-password "my super secret password"
+      16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     
+Copy the 16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX output and again, edit /etc/tor/torrc and find the line:
+
+    #HashedControlPassword 16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (this is the default password)
+    Take away the comment # and edit to:
+    'HashedControlPassword 16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (my super secret password)
+    
+Save, and run:
+
+    $ service tor start
+
+And thats it.
+
+
+    
 How To Install:
 
 Download the zip file or clone the repo with:
 
-    git clone http://github.com/petrexxy/torclient-lib
+    $ git clone http://github.com/petrexxy/torclient-lib
 
 After, run the setup.py installation script with the install argument:
 
-    python setup.py install
+    $ python setup.py install
     
 This will install the dependencies. If not, run:
  
-    pip install -r requirements.txt
+    $ pip install -r requirements.txt
     
 Then all the requirements and the library itself should be ready to use
 For more information on how to use it, check out the example.py script.
