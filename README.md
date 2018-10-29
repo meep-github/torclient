@@ -15,13 +15,13 @@ Then edit the file /etc/tor/torrc until you find the line:
 Next, set your password. This can be done by running the command:
 
     $ tor --hash-password "my super secret password"
-      16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      16:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
      
-Copy the 16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX output and again, edit /etc/tor/torrc and find the line:
+Copy the 16:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY output and again, edit /etc/tor/torrc and find the line:
 
     #HashedControlPassword 16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (this is the default password)
     Take away the comment # and edit to:
-    'HashedControlPassword 16:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (my super secret password)
+    'HashedControlPassword 16:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY (my super secret password)
     
 Save, and run:
 
