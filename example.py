@@ -90,7 +90,7 @@ def global_socket_example():
 if __name__ == '__main__':
 	seperate_socket_example()
 	try_and_renew()
-	print("\n\nTrying The Renewel\n")
+	print("\n\n-===+Trying The Renewel+===-\n\n")
 	seperate_socket_example()
 	""" OR YOU CAN DO """
 	#global_socket_example()
