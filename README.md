@@ -69,6 +69,10 @@ Next, setup the proxy connections:
 
     proxy_session = torclient.ProxySocket()
     proxy_socket  = proxy_session.InitProxy("localhost", 9050, False) #localhost = server, 9050 = port, False = not global proxy sockets (more info in example.py)
+    
+    #Renew the proxy session/get new IP!
+    
+    torclient.RenewProxy() #90% chance it will break the socket pipe
 
 Now, you can use 'proxy_socket' just like a normal socket object, and it goes through the proxy! You can also set up a non-proxy socket along side it!:
 
