@@ -23,7 +23,9 @@ import torclient #YAY :)!!!!!
 config = torclient.ControlConfig()
 config.SetControlPort(9051)
 config.SetAuthentication("proxy") #Don't steal my pwd ok? :D
+print("\n\n")
 print(config.ShowConfig()) #Make sure its all in order
+print("\n\n")
 config.Apply()
 
 
