@@ -34,6 +34,7 @@ def try_and_renew():
 	#Save this for later
 	#Some code in this function doesnt work completely correctly but im workin on it! :)
 
+	
 def seperate_socket_example():
 
 	proxy_session = torclient.ProxySocket()
@@ -70,9 +71,8 @@ def seperate_socket_example():
 	print("Your Regular IP: "+(receive_normal_socket[264:]).replace("\n", "")) # Hate those new lines! >:(
 	print("Your Proxy IP:   "+(receive_proxy_socket[264:]).replace("\n", ""))
 	#Should be different IP addresses! Unless the config broke >.>
-	print("\n\n")
 
-
+	
 def global_socket_example():
 
 	proxy_session = torclient.ProxySocket()
@@ -89,6 +89,7 @@ def global_socket_example():
 	print(rec2[264:])
 	#Should be the same IP addresses!
 
+	
 if __name__ == '__main__':
 	seperate_socket_example()
 	try_and_renew()
@@ -99,6 +100,7 @@ if __name__ == '__main__':
 	#try_and_renew()
 	#print("\n\nTrying The Renewel\n")
 	#global_socket_example()
+	print("\n\n") #All fini
 
 
 	#Pick an example!
