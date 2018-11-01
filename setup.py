@@ -2,6 +2,7 @@
 
 from distutils.core import setup
 from setuptools import *
+import os
 
 setup(
     name="torclient",
@@ -23,3 +24,8 @@ setup(
               'pysocks'
     ]
 )
+try:
+    os.system("cp /torclient/torclient.py /usr/lib/python2.7")
+except Exception as e:
+    print("Could Not Install!\n")
+    print(e)
