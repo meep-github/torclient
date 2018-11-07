@@ -48,11 +48,11 @@ class ControlConfig(object):
         except Exception as err:
             print(err)
 
-class ProxySocket(object):
+class InitProxy(object):
     def proxysocks(self, sock):
         s = sock()
         return s
-    def InitProxy(self,host,port,glbl):
+    def ProxySocket(self,host,port,glbl):
         try:
             proxy_info = {"host": str(host), "port": int(port)}
             socks.setdefaultproxy(  socks.PROXY_TYPE_SOCKS5,
