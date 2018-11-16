@@ -40,10 +40,13 @@ class ControlConfig(object):
     def ShowConfig(self):
         config = proxy_config
         return config
+    def SetAddress(self,address):
+	self.address = str(address)
+	proxy_config["Server Address"] = self.address
     def Apply(self):
         try:
             global controller
-            controller = stem.control.Controller.from_port(port=proxy_config["Control Port"])
+            controller = stem.control.Controller.from_port(address=(proxy_config["Server Address"] if proxy_config["Server Address"] else "127.0.0.1"), port=proxy_config["Control Port"])
             controller.authenticate("%s"%proxy_config["Authentication Password"])
         except Exception as err:
             print(err)
@@ -79,6 +82,7 @@ def RenewProxy():
             controller.signal(stem.Signal.NEWNYM)
             if str(GetIP()) not in str(current_ip):
                 continue
+		time.sleep(0.25)
             else:
                 current_ip = GetIP()
                 break
