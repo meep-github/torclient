@@ -37,9 +37,9 @@ def try_and_renew():
 	
 def seperate_socket_example():
 
-	proxy_session = torclient.ProxySocket()
+	proxy_session = torclient.InitProxy()
 
-	proxy_socket  = proxy_session.InitProxy("localhost", 9050, False) #This last boolean parameter specifies whether you want ALL created sockets to go through the proxy or if you want different sockets for different addresses
+	proxy_socket  = proxy_session.ProxySocket("localhost", 9050, False) #This last boolean parameter specifies whether you want ALL created sockets to go through the proxy or if you want different sockets for different addresses
 	#localhost = Proxy Server
 	#9050 = Port
 	#False = Non-Global Sockets
@@ -75,8 +75,8 @@ def seperate_socket_example():
 	
 def global_socket_example():
 
-	proxy_session = torclient.ProxySocket()
-	make_all_sockets = proxy_session.InitProxy("localhost", 9050, True) #This time set it to true so all outgoing requests from this program go through the proxy
+	proxy_session = torclient.InitProxy()
+	make_all_sockets = proxy_session.ProxySocket("localhost", 9050, True) #This time set it to true so all outgoing requests from this program go through the proxy
 
 	norm_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	norm_socket.connect(("ident.me", 80))
