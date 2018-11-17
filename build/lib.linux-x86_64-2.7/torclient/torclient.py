@@ -73,7 +73,7 @@ def GetIP():
     eip = requests.get("http://ident.me").text
     return eip
 
-def RenewProxy():
+def ForceRenewProxy():
     #@TODO while expression doesnt wanna work atm?
     current_ip = GetIP()
     try:
@@ -89,5 +89,8 @@ def RenewProxy():
     except:
         print("Proxy Error. Check Config!!")
         #raise "Proxy Error. Check Config!!"
-
+def RenewProxy():
+    global controller
+    controller.signal(stem.Signal.NEWNYM)
+    return True
 #@TODO Some Other Cool Stuff I Guess??? Im not sure atm :)
