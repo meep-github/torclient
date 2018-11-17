@@ -73,6 +73,10 @@ Next, setup the proxy connections:
     #Renew the proxy session/get new IP!
     
     torclient.RenewProxy() #90% chance it will break the socket pipe
+    
+    #If torclient.RenewProxy() doesn't work, try:
+    torclient.ForceRenewProxy() 
+    #It may cause timeouts though
 
 Now, you can use 'proxy_socket' just like a normal socket object, and it goes through the proxy! You can also set up a non-proxy socket along side it!:
 
