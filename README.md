@@ -57,6 +57,7 @@ First, create a configuration to control your proxy server via the script:
     my_proxy_config = torclient.ControlConfig()
     my_proxy_config.SetControlPort(9051) #default tor control port
     my_proxy_config.SetAuthentication("my super secret password")
+    my_proxy_config.SetAddress("127.0.0.1") #Make sure you set this
     my_proxy_config.Apply() #apply settings
     
 When you're finished, you can check your config with:
