@@ -36,7 +36,7 @@ How To Install:
 
 Download the zip file or clone the repo with:
 
-    $ git clone http://github.com/petrexxy/torclient-lib
+    $ git clone http://github.com/noctua-github/torclient-lib
 
 After, run the setup.py installation script with the install argument:
 
