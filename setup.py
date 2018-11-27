@@ -8,9 +8,9 @@ setup(
     name="torclient",
     version="1.1",
     description="A Simple, Lightweight and Easy To Use, TOR Proxy Library For Python",
-    author="petrexxy",
+    author="noctua",
     author_email="psmall.775@gmail.com",
-    url="https://github.com/petrexxy",
+    url="https://github.com/noctua-github",
     packages=["torclient"],
     classifiers=[
               "Programming Language :: Python",
