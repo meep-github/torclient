@@ -26,6 +26,11 @@ setup(
 )
 try:
     os.system("cp torclient/torclient.py /usr/lib/python2.7")
-except Exception as e:
-    print("Could Not Install!\n")
-    print(e)
+except:
+    try:
+        os.system("cp torclient/torclient.py /usr/local/lib/python2.7")
+    except:
+        try:
+            os.system("copy torclient/torclient.py C:\Python27\lib")
+         except:
+            pass
