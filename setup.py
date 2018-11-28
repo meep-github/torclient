@@ -32,5 +32,5 @@ except:
     except:
         try:
             os.system("copy torclient/torclient.py C:\Python27\lib")
-         except:
+        except:
             pass
