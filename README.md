@@ -68,8 +68,8 @@ When you're finished, you can check your config with:
     
 Next, setup the proxy connections:
 
-    proxy_session = torclient.ProxySocket()
-    proxy_socket  = proxy_session.InitProxy("localhost", 9050, False) #localhost = server, 9050 = port, False = not global proxy sockets (more info in example.py)
+    proxy_session = torclient.InitProxy()
+    proxy_socket  = proxy_session.ProxySocket("localhost", 9050, False) #localhost = server, 9050 = port, False = not global proxy sockets (more info in example.py)
     
     #Renew the proxy session/get new IP!
     
