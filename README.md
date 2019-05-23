@@ -93,3 +93,5 @@ Now, you can use 'proxy_socket' just like a normal socket object, and it goes th
     proxy_socket.close()
     s.close()
 
+
+I Also Have Other/Alternative Tor Modules @ https://gist.github.com/meep-github (C/Python)
